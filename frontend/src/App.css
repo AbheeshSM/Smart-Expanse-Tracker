@@ -1,0 +1,449 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 24px 16px 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-shell.light {
+  background-color: #b0c5ff;
+  color: #2b2b2b;
+}
+
+.app-shell.dark {
+  background-color: #250e00ea;
+  color: #e5e5e5;
+}
+
+.app-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.app-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.theme-toggle {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  cursor: pointer;
+  min-width: 140px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.app-shell.light .theme-toggle {
+  background: #548affa9;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(25, 86, 216, 0.342);
+}
+
+.app-shell.light .theme-toggle:hover,
+.app-shell.light .theme-toggle:focus-visible {
+  background: #4b7bffbd;
+  color: #f8fafc;
+  box-shadow: 0 16px 34px rgba(34, 99, 240, 0.591);
+}
+
+.app-shell.dark .theme-toggle {
+  background: #7e5000e2;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(245, 159, 11, 0.322);
+}
+
+.app-shell.dark .theme-toggle:hover,
+.app-shell.dark .theme-toggle:focus-visible {
+  background: #9f5500da;
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(255, 165, 10, 0.354);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.45);
+  outline-offset: 3px;
+}
+
+.app-title {
+  margin: 0 auto 10px;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: -0.04em;
+  max-width: 680px;
+}
+
+.app-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.app-grid.two-column {
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+}
+
+.bottom-grid {
+  margin-top: 24px;
+}
+
+.panel {
+  background: #ffffff;
+  
+  border-radius: 32px;
+  padding: 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  margin: 18px 0;
+}
+
+.panel:hover {
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.16);
+}
+
+.app-shell.dark .panel {
+  background: #0f172a;
+  border-color: #1f2937;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.top-panel {
+  border-color: #0038b18c;
+  border-width: 4px;
+  background: #e1eeff;
+}
+
+.app-shell.dark .top-panel {
+  background: #1e293b;
+  border-color: #60a5fa76;
+}
+
+.budget-panel {
+  border-color: #7d0038b5;
+  border-width: 4px;
+  background: #fde8f4;
+}
+
+.app-shell.dark .budget-panel {
+  background: #581c5a;
+  border-color: #f472b6;
+}
+
+.history-panel {
+  border-color: #00762ba0;
+  border-width: 4px;
+  background: #e6ffef;
+}
+
+.app-shell.dark .history-panel {
+  background: #134e4a;
+  border-color: #4ade80;
+}
+
+.form-panel {
+  border-color: #006d9f8a;
+  border-width: 4px;
+  background: #e0f2fe;
+}
+
+.app-shell.dark .form-panel {
+  background: #0f172a;
+  border-color: #38bdf8;
+}
+
+.panel h3,
+.panel h4 {
+  margin: 0 0 18px;
+  color: inherit;
+}
+
+.panel-title {
+  margin: 0 0 18px;
+  color: inherit;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  padding-bottom: 12px;
+}
+
+.app-shell.dark .panel-title {
+  border-color: rgba(100, 116, 139, 0.4);
+}
+
+.panel-header h4 {
+  margin: 0 0 10px;
+  color: rgba(100, 116, 139, 0.92);
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.panel-header h1 {
+  margin: 0 0 15px;
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+.balance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+  background: transparent;
+  border-radius: 22px;
+  overflow: visible;
+}
+
+.app-shell.dark .balance-grid {
+  background: transparent;
+}
+
+.balance-item {
+  padding: 24px 20px;
+  text-align: center;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  margin: 0;
+}
+
+.app-shell.dark .balance-item {
+  background: #111827;
+  border-color: #334155;
+}
+
+.balance-item + .balance-item {
+  border-left: none;
+}
+
+.app-shell.dark .balance-item + .balance-item {
+  border-left: none;
+}
+
+.income-item {
+  background: rgba(59, 130, 246, 0.12);
+  border: none;
+}
+
+.app-shell.dark .income-item {
+  background: rgba(59, 130, 246, 0.18);
+  border: none;
+}
+
+.expense-item {
+  background: rgba(239, 68, 68, 0.12);
+  border: none;
+}
+
+.app-shell.dark .expense-item {
+  background: rgba(239, 68, 68, 0.18);
+  border: none;
+}
+
+.balance-item h5 {
+  margin: 0 0 10px;
+  color: rgba(100, 116, 139, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.92rem;
+}
+
+.balance-item p {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #ef4444;
+}
+
+.chart-section,
+.history-section,
+.form-section {
+  width: 100%;
+}
+
+.empty-state {
+  color: rgba(100, 116, 139, 0.9);
+  padding: 18px 0;
+  text-align: center;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  transition: transform 0.2s ease;
+}
+
+.app-shell.dark .transaction-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(100, 116, 139, 0.3);
+}
+
+.transaction-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.transaction-category {
+  color: rgba(100, 116, 139, 0.8);
+  font-size: 0.94rem;
+}
+
+.transaction-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-amount {
+  font-weight: 700;
+}
+
+.delete-button {
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  padding: 9px 13px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.transaction-form .field-group {
+  margin-bottom: 18px;
+}
+
+.transaction-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(100, 116, 139, 0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-shell.dark .input-field {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(100, 116, 139, 0.4);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+select.input-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%232563eb' d='M4.5 6l3.5 3.5L11.5 6z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 27px;
+  padding-right: 44px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+select.input-field option {
+  background: #ffffff;
+  color: #2b2b2b;
+  padding: 10px;
+}
+
+.app-shell.dark select.input-field {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%2360a5fa' d='M4.5 6l3.5 3.5L11.5 6z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
+}
+
+.app-shell.dark select.input-field option {
+  background: #0f172a;
+  color: #e5e5e5;
+}
+
+.primary-button {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 10px;
+  background: #8da5fd;
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.app-shell.dark .primary-button {
+  background: #1f316e;
+  color: #ffffff;
+  color: #7ea8e6;
+}
+
+.app-shell.dark .primary-button:hover {
+  background: #17377f;
+}
+
+
+
+.loading-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 20px 12px 30px;
+  }
+
+  .app-header {
+    justify-content: center;
+  }
+
+  .panel {
+    padding: 22px;
+  }
+
+  .balance-grid {
+    grid-template-columns: 1fr;
+  }
+}
