@@ -1,4 +1,4 @@
-# Finance Tracker Dashboard
+# Smart Expanse Tracker
 
 A Full-Stack MERN (MongoDB, Express.js, React, Node.js) application designed to help users manage and track personal finances. The dashboard provides real-time financial insights through dynamic calculations, interactive charts, and a responsive user interface.
 
